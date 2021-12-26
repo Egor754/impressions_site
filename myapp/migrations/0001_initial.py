@@ -5,7 +5,6 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = [
@@ -21,7 +20,9 @@ class Migration(migrations.Migration):
                 ('latitude', models.DecimalField(decimal_places=4, max_digits=7, verbose_name='Широта')),
                 ('longitude', models.DecimalField(decimal_places=4, max_digits=7, verbose_name='Долгота')),
                 ('description', models.TextField(verbose_name='Описание')),
-                ('owner', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='memories', to='auth.user', verbose_name='Пользователь')),
+                ('owner',
+                 models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='memories', to='auth.user',
+                                   verbose_name='Пользователь')),
             ],
         ),
     ]

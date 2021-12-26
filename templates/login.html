@@ -28,9 +28,8 @@
                     <p class="h5 font-weight-light mt-3">Войдите, чтобы управлять</p>
                     <a class="btn btn-primary mt-3" href="{% provider_login_url "vk" method="oauth2" %}" role="button">Войти
                         через VK</a>
-                    <a class="btn btn-primary mt-3" href="{% provider_login_url "vk" method="oauth2" %}" role="button">Войти
+                    <a class="btn btn-primary mt-3" href="{% provider_login_url "facebook" method="oauth2" %}" role="button">Войти
                         через Facebook</a>
-
                 </div>
                 {#            <img src="{{user.socialaccount_set.all.0.get_avatar_url}}" class="card-img-top" alt="...">#}
             </div>

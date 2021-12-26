@@ -1,11 +1,9 @@
 import os
-import django_heroku
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-lrq7v!iic=cqpvedw5*s8&aifeiee(s5(sd-w12c2m_!27_m%f'
-
+SECRET_KEY = '1awdsadasd'
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
@@ -42,8 +40,7 @@ ROOT_URLCONF = 'impressions_site.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
-        ,
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -103,4 +100,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'main'
 LOGOUT_REDIRECT_URL = 'login'
-django_heroku.settings(locals())
